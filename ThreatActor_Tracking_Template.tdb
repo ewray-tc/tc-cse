@@ -1,5 +1,5 @@
 {
-  "name": "${DASHBOARD_NAME}",
+  "name": "{DASHBOARD_NAME}",
   "dashboard": {
     "cards": [
       {
@@ -12,8 +12,8 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "${GROUP_NAME} IOCs For 2025",
-        "advQuery": "${IOCS_2025}",
+        "title": "{GROUP_NAME} IOCs For 2025",
+        "advQuery": "{IOCS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
           "chartType": "number-card",
@@ -681,8 +681,8 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "Top owners contributing ${GROUP_NAME} IOCs",
-        "advQuery": "${IOCS_2025}",
+        "title": "Top owners contributing {GROUP_NAME} IOCs",
+        "advQuery": "{IOCS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
           "chartType": "number-card",
@@ -1350,8 +1350,8 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "Intel Related to ${GROUP_NAME} In 2025",
-        "advQuery": "${GROUPS_2025}",
+        "title": "Intel Related to {GROUP_NAME} In 2025",
+        "advQuery": "{GROUPS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
           "chartType": "number-card",
@@ -1966,8 +1966,8 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "Top owners providing intel related to ${GROUP_NAME} 2025",
-        "advQuery": "${GROUPS_2025}",
+        "title": "Top owners providing intel related to {GROUP_NAME} 2025",
+        "advQuery": "{GROUPS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
           "chartType": "number-card",
@@ -2582,8 +2582,8 @@
           "sizex": 4,
           "sizey": 2
         },
-        "title": "Tags seen on Group ${GROUP_NAME}",
-        "advQuery": "${TAGS_2025}",
+        "title": "Tags seen on Group {GROUP_NAME}",
+        "advQuery": "{TAGS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
           "chartType": "tree-map",
@@ -3198,8 +3198,8 @@
           "sizex": 8,
           "sizey": 2
         },
-        "title": "${GROUP_NAME} Related Intel - Last 7 days",
-        "advQuery": "${GROUPS_7DAY}",
+        "title": "{GROUP_NAME} Related Intel - Last 7 days",
+        "advQuery": "{GROUPS_7DAY}",
         "chartOptions": {
           "selectedChartGroup": "barCharts",
           "chartType": "bar-vertical",
@@ -3825,8 +3825,8 @@
           "sizex": 8,
           "sizey": 2
         },
-        "title": "${GROUP_NAME} Related IOCs - Last 14 days",
-        "advQuery": "${IOCS_14DAY}",
+        "title": "{GROUP_NAME} Related IOCs - Last 14 days",
+        "advQuery": "{IOCS_14DAY}",
         "chartOptions": {
           "selectedChartGroup": "barCharts",
           "chartType": "bar-vertical",
@@ -4506,8 +4506,8 @@
           "sizex": 8,
           "sizey": 2
         },
-        "title": "${GROUP_NAME} Related TTPs - Last 30 days",
-        "advQuery": "${TTPS_30DAY}",
+        "title": "{GROUP_NAME} Related TTPs - Last 30 days",
+        "advQuery": "{TTPS_30DAY}",
         "chartOptions": {
           "selectedChartGroup": "barCharts",
           "chartType": "bar-vertical",
@@ -5129,8 +5129,8 @@
           "sizex": 8,
           "sizey": 2
         },
-        "title": "${GROUP_NAME} Related CVEs - Last 30 days",
-        "advQuery": "${CVE_30DAY}",
+        "title": "{GROUP_NAME} Related CVEs - Last 30 days",
+        "advQuery": "{CVE_30DAY}",
         "chartOptions": {
           "selectedChartGroup": "barCharts",
           "chartType": "bar-vertical",
