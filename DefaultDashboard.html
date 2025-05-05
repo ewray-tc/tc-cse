@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Dashboard</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9fafb;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+    }
+    .form-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      max-width: 400px;
+      width: 100%;
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+    input[type="text"] {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 1rem;
+    }
+    .keyword-box {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 0.5rem;
+      flex-wrap: wrap;
+    }
+    .keyword {
+      background: #e0f2fe;
+      padding: 0.3rem 0.6rem;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    button {
+      padding: 0.6rem 1rem;
+      background: #2563eb;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #1e40af;
+    }
+    .inline-btn {
+      margin-top: 0.5rem;
+    }
+    select {
+      width: 100%;
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+	}
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <form id="dashboardForm">
+      <div class="form-group">
+        <label for="dashboardName">Dashboard Name</label>
+        <input type="text" id="dashboardName" name="dashboardName" maxlength="60" required />
+      </div>
+      <div class="form-group">
+        <label for="primaryTopic">Primary Topic Name</label>
+        <input type="text" id="primaryTopic" name="primaryTopic" maxlength="25" required />
+      </div>
+      <div class="form-group">
+        <label for="keywordInput">Extra Keywords</label>
+        <input type="text" id="keywordInput" maxlength="30" />
+        <button type="button" class="inline-btn" onclick="addKeyword()">+ Add Keyword</button>
+        <div class="keyword-box" id="keywordBox"></div>
+      </div>
+      <div class="form-group">
+        <label for="keywordLogic">Keyword Matching Logic With Primary Topic</label>
+        <select id="keywordLogic">
+          <option value="OR">OR</option>
+          <option value="AND">AND</option>
+        </select>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <script>
+    const keywords = [];
+
+    function addKeyword() {
+      const input = document.getElementById('keywordInput');
+      const value = input.value.trim();
+      if (value && !keywords.includes(value)) {
+        keywords.push(value);
+        input.value = '';
+        renderKeywords();
+      }
+    }
+
+    function removeKeyword(keyword) {
+      const index = keywords.indexOf(keyword);
+      if (index > -1) {
+        keywords.splice(index, 1);
+        renderKeywords();
+      }
+    }
+
+    function renderKeywords() {
+      const box = document.getElementById('keywordBox');
+      box.innerHTML = '';
+      keywords.forEach(k => {
+        const span = document.createElement('span');
+        span.textContent = k;
+        span.className = 'keyword';
+        span.onclick = () => removeKeyword(k);
+        box.appendChild(span);
+      });
+    }
+
+    document.getElementById('dashboardForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const data = {
+        dashboardName: document.getElementById('dashboardName').value.trim(),
+        primaryTopic: document.getElementById('primaryTopic').value.trim(),
+        extraKeywords: keywords,
+        keywordLogic: document.getElementById('keywordLogic').value
+      };
+
+fetch('https://success.threatconnect.com/api/playbook/DashboardCreatorBackend', {
+  method: 'POST',
+  headers: {
+    'Content-Type': 'application/json'
+  },
+  body: JSON.stringify(data)
+})
+.then(async res => {
+  if (!res.ok) throw new Error('Network response was not ok');
+  console.log("Keyword Logic:", document.getElementById('keywordLogic')?.value);
+  // Try to parse JSON only if there's a body
+  const text = await res.text();
+  return text ? JSON.parse(text) : {};
+})
+.then(result => {
+  alert('Dashboard submitted successfully!');
+  document.getElementById('dashboardForm').reset();
+  keywords.length = 0;
+  renderKeywords();
+})
+.catch(error => {
+  alert('Error submitting dashboard: ' + error.message);
+});
+    });
+  </script>
+</body>
+</html>
