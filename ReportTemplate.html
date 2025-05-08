@@ -95,6 +95,42 @@ color: #3182ce;
 text-decoration: underline;
 }
 
+.threat-actor {
+  display: inline-block;
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 0.75em;
+  padding: 4px 10px;
+  margin-top:5px;
+  border-radius: 999px;
+  font-weight: 400;
+  align-self: flex-start;
+  text-decoration: none;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(4px);
+}
+
+.threat-actor:hover { box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1); transform: translateY(-0px); } 
+
+.report-card {
+  position: relative; /* Needed for positioning the tag */
+}
+.inline-logo {
+  height: 1em;
+  vertical-align: top;
+  margin-left: 4px;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+  padding: 4px 10px;
+  margin-top:5px;
+  border-radius: 999px;
+  background: gray;
+}
+
+.report-link a:hover .inline-logo {
+  opacity: 1;
+}
 
 @media (max-width: 600px) {
 .header h1 {
