@@ -136,6 +136,24 @@ text-decoration: underline;
   opacity: 1;
 }
 
+.copy-button {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  background-color: #edf2f7;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 10px;
+  font-size: 0.9em;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.copy-button:hover {
+  background-color: #e2e8f0;
+}
+  
 @media (max-width: 600px) {
 .header h1 {
 font-size: 1.5em;
@@ -158,5 +176,15 @@ This report contains recent cyber security updates and threat intelligence. Clic
 <div class="report-section">
 {CARDS}
 </div>
+  <script>
+  function copyText(button) {
+    const card = button.closest('.report-card');
+    const text = card.querySelector('.copy-text').textContent;
+    navigator.clipboard.writeText(text).then(() => {
+      button.textContent = '✅';
+      setTimeout(() => button.textContent = '📋', 1500);
+    });
+  }
+</script>
 </body>
 </html>
