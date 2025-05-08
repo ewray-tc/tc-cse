@@ -176,15 +176,30 @@ This report contains recent cyber security updates and threat intelligence. Clic
 <div class="report-section">
 {CARDS}
 </div>
-  <script>
+<script>
   function copyText(button) {
     const card = button.closest('.report-card');
-    const text = card.querySelector('.copy-text').textContent;
+    const text = card.querySelector('.copy-text').textContent.trim();
+    if (text === "'N/A'") return;
+
     navigator.clipboard.writeText(text).then(() => {
       button.textContent = '✅';
       setTimeout(() => button.textContent = '📋', 1500);
     });
   }
+
+  // On page load, hide buttons with "N/A" copy text
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.report-card').forEach(card => {
+      const text = card.querySelector('.copy-text')?.textContent.trim();
+      if (text === "'N/A'") {
+        const button = card.querySelector('.copy-button');
+        if (button) button.classList.add('hidden');
+      }
+    });
+  });
 </script>
+</div>
+</div>
 </body>
 </html>
