@@ -169,7 +169,7 @@
         "groupBy": "typename",
         "groupByDataType": "String",
         "groupByIncludeOther": false,
-        "groupByLimit": 25,
+        "groupByLimit": 6,
         "groupByOrder": "DESC",
         "groupByTargetEnabled": true,
         "groupByTargetOptions": [
