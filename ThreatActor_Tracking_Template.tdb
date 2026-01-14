@@ -12,7 +12,7 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "{GROUP_NAME} IOCs For 2025",
+        "title": "{GROUP_NAME} IOCs - Past year",
         "advQuery": "{IOCS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
@@ -1350,7 +1350,7 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "Intel Related to {GROUP_NAME} In 2025",
+        "title": "Intel Related to {GROUP_NAME} - Past Year",
         "advQuery": "{GROUPS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
@@ -1966,7 +1966,7 @@
           "sizex": 3,
           "sizey": 2
         },
-        "title": "Top owners providing intel related to {GROUP_NAME} 2025",
+        "title": "Top owners providing intel related to {GROUP_NAME} - Past Year",
         "advQuery": "{GROUPS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
@@ -5748,3 +5748,4 @@
     "orgMap": {}
   }
 }
+
