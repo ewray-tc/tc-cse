@@ -1354,7 +1354,7 @@
         "advQuery": "{GROUPS_2025}",
         "chartOptions": {
           "selectedChartGroup": "otherCharts",
-          "chartType": "number-card",
+          "chartType": "tree-map",
           "owners": [],
           "subtypes": [],
           "advQuery": "",
@@ -5748,4 +5748,5 @@
     "orgMap": {}
   }
 }
+
 
