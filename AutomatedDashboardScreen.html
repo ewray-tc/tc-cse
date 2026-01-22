@@ -85,7 +85,7 @@
       </div>
       <div class="form-group">
         <label for="keywordInput">Extra Keywords</label>
-        <input type="text" id="keywordInput" maxlength="30" />
+        <input type="text" id="keywordInput" maxlength="2000" />
         <button type="button" class="inline-btn" onclick="addKeyword()">+ Add Keyword</button>
         <div class="keyword-box" id="keywordBox"></div>
       </div>
@@ -107,35 +107,46 @@
   <script>
     const keywords = [];
 
-    function addKeyword() {
-      const input = document.getElementById('keywordInput');
-      const value = input.value.trim();
-      if (value && !keywords.includes(value)) {
-        keywords.push(value);
-        input.value = '';
-        renderKeywords();
-      }
-    }
+  function addKeyword() {
+    const input = document.getElementById('keywordInput');
+    const rawValue = input.value.trim();
+    if (!rawValue) return;
 
-    function removeKeyword(keyword) {
-      const index = keywords.indexOf(keyword);
-      if (index > -1) {
-        keywords.splice(index, 1);
-        renderKeywords();
-      }
-    }
+    // Split on pipe if present, otherwise treat as single keyword
+    const parts = rawValue.includes('|')
+      ? rawValue.split('|')
+      : [rawValue];
 
-    function renderKeywords() {
-      const box = document.getElementById('keywordBox');
-      box.innerHTML = '';
-      keywords.forEach(k => {
-        const span = document.createElement('span');
-        span.textContent = k;
-        span.className = 'keyword';
-        span.onclick = () => removeKeyword(k);
-        box.appendChild(span);
-      });
+    parts.forEach(part => {
+      const keyword = part.trim();
+      if (keyword && !keywords.includes(keyword)) {
+        keywords.push(keyword);
+      }
+    });
+
+    input.value = '';
+    renderKeywords();
+  }
+
+  function removeKeyword(keyword) {
+    const index = keywords.indexOf(keyword);
+    if (index > -1) {
+      keywords.splice(index, 1);
+      renderKeywords();
     }
+  }
+
+  function renderKeywords() {
+    const box = document.getElementById('keywordBox');
+    box.innerHTML = '';
+    keywords.forEach(k => {
+      const span = document.createElement('span');
+      span.textContent = k;
+      span.className = 'keyword';
+      span.onclick = () => removeKeyword(k);
+      box.appendChild(span);
+    });
+  }
 
     document.getElementById('dashboardForm').addEventListener('submit', function(e) {
       e.preventDefault();
