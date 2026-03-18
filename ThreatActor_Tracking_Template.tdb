@@ -3,6 +3,557 @@
   "dashboard": {
     "cards": [
       {
+        "id": 17,
+        "type": "query",
+        "config": {
+          "dragHandle": ".handle",
+          "col": 1,
+          "row": 5,
+          "sizex": 8,
+          "sizey": 2
+        },
+        "title": "{GROUP_NAME} Related TTPs - Last 30 days",
+        "advQuery": "{TTPS_30DAY}",
+        "chartOptions": {
+          "selectedChartGroup": "barCharts",
+          "chartType": "bar-horizontal",
+          "owners": [],
+          "subtypes": [],
+          "advQuery": "",
+          "inputFormat": "singleSeries",
+          "allowedInputFormats": [
+            "singleSeries"
+          ],
+          "theme": "",
+          "view": [],
+          "colorScheme": "tc",
+          "schemeType": "ordinal",
+          "single": "",
+          "showXAxis": true,
+          "showYAxis": true,
+          "showLegend": false,
+          "legendTitle": "Legend",
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
+          "xAxisLabel": "",
+          "yAxisLabel": "",
+          "showGridLines": false,
+          "gradient": false,
+          "barPadding": 8,
+          "groupPadding": 16,
+          "tooltipDisabled": false,
+          "roundEdges": true,
+          "roundDomains": false,
+          "explodeSlices": false,
+          "showLabels": true,
+          "doughnut": false,
+          "arcWidth": 0.25,
+          "gaugeTextValue": "",
+          "gaugeUnits": "Totals",
+          "gaugeAngleSpan": 240,
+          "gaugeStartAngle": -120,
+          "gaugeShowAxis": true,
+          "gaugeLargeSegments": 6,
+          "gaugeSmallSegments": 2,
+          "gaugeValue": 86,
+          "gaugePreviousValue": 72,
+          "minRadius": 10,
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
+        },
+        "dashboardColumns": 16,
+        "datatableOptions": {
+          "rowsPerPage": 10,
+          "selectedColumns": []
+        },
+        "dateOrder": "ASC",
+        "dateRange": "range",
+        "dateType": "relative",
+        "defaultsSet": true,
+        "endDateRelative": 0,
+        "filters": {
+          "type": "groups",
+          "owners": [],
+          "subTypes": [],
+          "tags": [],
+          "containsText": "",
+          "documentType": "",
+          "incidentStatus": "",
+          "eventStatus": "",
+          "signatureType": "",
+          "securitylabel": "",
+          "ownerName": "",
+          "task": {
+            "taskStatus": "",
+            "taskAssignee": "",
+            "taskEscalationDate": "",
+            "dueDate": ""
+          },
+          "confidence": {
+            "operator": ">",
+            "value": -1
+          },
+          "rating": {
+            "operator": ">",
+            "value": 0
+          },
+          "dateAdded": {
+            "beforeDate": "",
+            "afterDate": ""
+          },
+          "lastObserved": "",
+          "hostData": {
+            "whoisActive": false,
+            "dnsActive": false
+          },
+          "geoLocData": {
+            "addresscidr": "",
+            "countryCode": "",
+            "organization": "",
+            "asn": ""
+          },
+          "attributes": {},
+          "associatedGroup": {
+            "id": 0,
+            "name": ""
+          },
+          "associatedIndicator": {
+            "id": 0,
+            "name": ""
+          },
+          "victimsData": {
+            "organization": "",
+            "suborg": "",
+            "nationality": "",
+            "workLocation": ""
+          },
+          "victimassetsData": {
+            "victimName": "",
+            "asset": ""
+          },
+          "indicatorsData": {
+            "indicatorActive": false,
+            "observationCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "threatAssessScore": {
+              "enabled": false,
+              "selectedRange": "",
+              "low": 0,
+              "high": 0
+            },
+            "falsePositiveCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            }
+          },
+          "groupsData": {
+            "emailScore": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "eventDate": {
+              "low": "",
+              "high": ""
+            },
+            "taskDueDate": {
+              "low": "",
+              "high": ""
+            }
+          }
+        },
+        "groupBy": "attackTag",
+        "groupByAggValue": "count",
+        "groupByDataType": "String",
+        "groupByIncludeOther": false,
+        "groupByLimit": 15,
+        "groupByOrder": "DESC",
+        "groupByTargetEnabled": false,
+        "groupByTargetOptions": [],
+        "inheritOwners": true,
+        "queryBy": "groups",
+        "queryView": "chart",
+        "selectedCardGroup": "query",
+        "startDateRelative": -7,
+        "subType": "new-query",
+        "sumAcrossOwners": true
+      },
+      {
+        "id": 20,
+        "type": "query",
+        "config": {
+          "dragHandle": ".handle",
+          "col": 9,
+          "row": 7,
+          "sizex": 8,
+          "sizey": 2
+        },
+        "title": "Active Malware - Last 7 days",
+        "advQuery": "{MALWARE_7DAYS}",
+        "chartOptions": {
+          "selectedChartGroup": "barCharts",
+          "chartType": "bar-vertical",
+          "owners": [],
+          "subtypes": [],
+          "advQuery": "",
+          "inputFormat": "singleSeries",
+          "allowedInputFormats": [
+            "singleSeries"
+          ],
+          "theme": "",
+          "view": [],
+          "colorScheme": "tc",
+          "schemeType": "ordinal",
+          "single": "",
+          "showXAxis": true,
+          "showYAxis": true,
+          "showLegend": false,
+          "legendTitle": "Legend",
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
+          "xAxisLabel": "",
+          "yAxisLabel": "",
+          "showGridLines": false,
+          "gradient": false,
+          "barPadding": 8,
+          "groupPadding": 16,
+          "tooltipDisabled": false,
+          "roundEdges": true,
+          "roundDomains": false,
+          "explodeSlices": false,
+          "showLabels": true,
+          "doughnut": false,
+          "arcWidth": 0.25,
+          "gaugeTextValue": "",
+          "gaugeUnits": "Totals",
+          "gaugeAngleSpan": 240,
+          "gaugeStartAngle": -120,
+          "gaugeShowAxis": true,
+          "gaugeLargeSegments": 6,
+          "gaugeSmallSegments": 2,
+          "gaugeValue": 86,
+          "gaugePreviousValue": 72,
+          "minRadius": 10,
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
+        },
+        "dashboardColumns": 16,
+        "datatableOptions": {
+          "rowsPerPage": 10,
+          "selectedColumns": [
+            1,
+            2,
+            3,
+            9,
+            10
+          ]
+        },
+        "dateOrder": "ASC",
+        "dateRange": "range",
+        "dateType": "relative",
+        "defaultsSet": true,
+        "endDateRelative": 0,
+        "filters": {
+          "type": "groups",
+          "owners": [],
+          "subTypes": [],
+          "tags": [],
+          "containsText": "",
+          "documentType": "",
+          "incidentStatus": "",
+          "eventStatus": "",
+          "signatureType": "",
+          "securitylabel": "",
+          "ownerName": "",
+          "task": {
+            "taskStatus": "",
+            "taskAssignee": "",
+            "taskEscalationDate": "",
+            "dueDate": ""
+          },
+          "confidence": {
+            "operator": ">",
+            "value": -1
+          },
+          "rating": {
+            "operator": ">",
+            "value": 0
+          },
+          "dateAdded": {
+            "beforeDate": "",
+            "afterDate": ""
+          },
+          "lastObserved": "",
+          "hostData": {
+            "whoisActive": false,
+            "dnsActive": false
+          },
+          "geoLocData": {
+            "addresscidr": "",
+            "countryCode": "",
+            "organization": "",
+            "asn": ""
+          },
+          "attributes": {},
+          "associatedGroup": {
+            "id": 0,
+            "name": ""
+          },
+          "associatedIndicator": {
+            "id": 0,
+            "name": ""
+          },
+          "victimsData": {
+            "organization": "",
+            "suborg": "",
+            "nationality": "",
+            "workLocation": ""
+          },
+          "victimassetsData": {
+            "victimName": "",
+            "asset": ""
+          },
+          "indicatorsData": {
+            "indicatorActive": false,
+            "observationCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "threatAssessScore": {
+              "enabled": false,
+              "selectedRange": "",
+              "low": 0,
+              "high": 0
+            },
+            "falsePositiveCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            }
+          },
+          "groupsData": {
+            "emailScore": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "eventDate": {
+              "low": "",
+              "high": ""
+            },
+            "taskDueDate": {
+              "low": "",
+              "high": ""
+            }
+          }
+        },
+        "groupBy": "typeName",
+        "groupByAggValue": "count",
+        "groupByDataType": "String",
+        "groupByIncludeOther": false,
+        "groupByLimit": 25,
+        "groupByOrder": "DESC",
+        "groupByTargetEnabled": false,
+        "groupByTargetOptions": [],
+        "inheritOwners": true,
+        "queryBy": "groups",
+        "queryView": "datatable",
+        "selectedCardGroup": "query",
+        "startDateRelative": -7,
+        "subType": "new-query",
+        "sumAcrossOwners": true
+      },
+      {
+        "id": 19,
+        "type": "query",
+        "config": {
+          "dragHandle": ".handle",
+          "col": 9,
+          "row": 5,
+          "sizex": 8,
+          "sizey": 2
+        },
+        "title": "Active Actors - Last 7 days",
+        "advQuery": "{ACTORS_7DAYS}",
+        "chartOptions": {
+          "selectedChartGroup": "barCharts",
+          "chartType": "bar-vertical",
+          "owners": [],
+          "subtypes": [],
+          "advQuery": "",
+          "inputFormat": "singleSeries",
+          "allowedInputFormats": [
+            "singleSeries"
+          ],
+          "theme": "",
+          "view": [],
+          "colorScheme": "tc",
+          "schemeType": "ordinal",
+          "single": "",
+          "showXAxis": true,
+          "showYAxis": true,
+          "showLegend": false,
+          "legendTitle": "Legend",
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
+          "xAxisLabel": "",
+          "yAxisLabel": "",
+          "showGridLines": false,
+          "gradient": false,
+          "barPadding": 8,
+          "groupPadding": 16,
+          "tooltipDisabled": false,
+          "roundEdges": true,
+          "roundDomains": false,
+          "explodeSlices": false,
+          "showLabels": true,
+          "doughnut": false,
+          "arcWidth": 0.25,
+          "gaugeTextValue": "",
+          "gaugeUnits": "Totals",
+          "gaugeAngleSpan": 240,
+          "gaugeStartAngle": -120,
+          "gaugeShowAxis": true,
+          "gaugeLargeSegments": 6,
+          "gaugeSmallSegments": 2,
+          "gaugeValue": 86,
+          "gaugePreviousValue": 72,
+          "minRadius": 10,
+          "maxRadius": 25
+        },
+        "dashboardColumns": 16,
+        "datatableOptions": {
+          "rowsPerPage": 10,
+          "selectedColumns": [
+            1,
+            2,
+            3,
+            9,
+            10
+          ]
+        },
+        "dateOrder": "ASC",
+        "dateRange": "range",
+        "dateType": "relative",
+        "defaultsSet": true,
+        "endDateRelative": 0,
+        "filters": {
+          "type": "groups",
+          "owners": [],
+          "subTypes": [],
+          "tags": [],
+          "containsText": "",
+          "documentType": "",
+          "incidentStatus": "",
+          "eventStatus": "",
+          "signatureType": "",
+          "securitylabel": "",
+          "ownerName": "",
+          "task": {
+            "taskStatus": "",
+            "taskAssignee": "",
+            "taskEscalationDate": "",
+            "dueDate": ""
+          },
+          "confidence": {
+            "operator": ">",
+            "value": -1
+          },
+          "rating": {
+            "operator": ">",
+            "value": 0
+          },
+          "dateAdded": {
+            "beforeDate": "",
+            "afterDate": ""
+          },
+          "lastObserved": "",
+          "hostData": {
+            "whoisActive": false,
+            "dnsActive": false
+          },
+          "geoLocData": {
+            "addresscidr": "",
+            "countryCode": "",
+            "organization": "",
+            "asn": ""
+          },
+          "attributes": {},
+          "associatedGroup": {
+            "id": 0,
+            "name": ""
+          },
+          "associatedIndicator": {
+            "id": 0,
+            "name": ""
+          },
+          "victimsData": {
+            "organization": "",
+            "suborg": "",
+            "nationality": "",
+            "workLocation": ""
+          },
+          "victimassetsData": {
+            "victimName": "",
+            "asset": ""
+          },
+          "indicatorsData": {
+            "indicatorActive": false,
+            "observationCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "threatAssessScore": {
+              "enabled": false,
+              "selectedRange": "",
+              "low": 0,
+              "high": 0
+            },
+            "falsePositiveCount": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            }
+          },
+          "groupsData": {
+            "emailScore": {
+              "enabled": false,
+              "low": 0,
+              "high": 0
+            },
+            "eventDate": {
+              "low": "",
+              "high": ""
+            },
+            "taskDueDate": {
+              "low": "",
+              "high": ""
+            }
+          }
+        },
+        "groupBy": "typeName",
+        "groupByAggValue": "count",
+        "groupByDataType": "String",
+        "groupByIncludeOther": false,
+        "groupByLimit": 25,
+        "groupByOrder": "DESC",
+        "groupByTargetEnabled": false,
+        "groupByTargetOptions": [],
+        "inheritOwners": true,
+        "queryBy": "groups",
+        "queryView": "datatable",
+        "selectedCardGroup": "query",
+        "startDateRelative": -7,
+        "subType": "new-query",
+        "sumAcrossOwners": true
+      },
+      {
         "id": 9,
         "type": "query",
         "config": {
@@ -33,8 +584,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -58,7 +609,8 @@
           "gaugeValue": 86,
           "gaugePreviousValue": 72,
           "minRadius": 10,
-          "maxRadius": 25
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
         },
         "dashboardColumns": 16,
         "dateOrder": "ASC",
@@ -702,8 +1254,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -727,7 +1279,8 @@
           "gaugeValue": 86,
           "gaugePreviousValue": 72,
           "minRadius": 10,
-          "maxRadius": 25
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
         },
         "dashboardColumns": 16,
         "dateOrder": "ASC",
@@ -1371,8 +1924,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -1396,7 +1949,8 @@
           "gaugeValue": 86,
           "gaugePreviousValue": 72,
           "minRadius": 10,
-          "maxRadius": 25
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
         },
         "dashboardColumns": 16,
         "dateOrder": "ASC",
@@ -1987,8 +2541,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -2012,7 +2566,8 @@
           "gaugeValue": 86,
           "gaugePreviousValue": 72,
           "minRadius": 10,
-          "maxRadius": 25
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
         },
         "dashboardColumns": 16,
         "dateOrder": "ASC",
@@ -2596,15 +3151,15 @@
           ],
           "theme": "",
           "view": [],
-          "colorScheme": "night",
+          "colorScheme": "tc-purple-mono",
           "schemeType": "linear",
           "single": "",
           "showXAxis": true,
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -2628,7 +3183,8 @@
           "gaugeValue": 86,
           "gaugePreviousValue": 72,
           "minRadius": 10,
-          "maxRadius": 25
+          "maxRadius": 25,
+          "dataErrorMessage": "No data"
         },
         "dashboardColumns": 16,
         "dateOrder": "ASC",
@@ -3189,633 +3745,6 @@
         "sumAcrossOwners": true
       },
       {
-        "id": 15,
-        "type": "query",
-        "config": {
-          "dragHandle": ".handle",
-          "col": 9,
-          "row": 3,
-          "sizex": 8,
-          "sizey": 2
-        },
-        "title": "{GROUP_NAME} Related Intel - Last 7 days",
-        "advQuery": "{GROUPS_7DAY}",
-        "chartOptions": {
-          "selectedChartGroup": "barCharts",
-          "chartType": "bar-vertical",
-          "owners": [],
-          "subtypes": [],
-          "advQuery": "",
-          "inputFormat": "singleSeries",
-          "allowedInputFormats": [
-            "sparkline",
-            "date"
-          ],
-          "theme": "",
-          "view": [],
-          "colorScheme": "tc-blue-mono",
-          "schemeType": "linear",
-          "single": "",
-          "showXAxis": true,
-          "showYAxis": true,
-          "showLegend": false,
-          "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
-          "xAxisLabel": "",
-          "yAxisLabel": "",
-          "showGridLines": false,
-          "gradient": false,
-          "barPadding": 8,
-          "groupPadding": 16,
-          "tooltipDisabled": false,
-          "roundEdges": true,
-          "roundDomains": false,
-          "explodeSlices": false,
-          "showLabels": true,
-          "doughnut": false,
-          "arcWidth": 0.25,
-          "gaugeTextValue": "",
-          "gaugeUnits": "totals",
-          "gaugeAngleSpan": 240,
-          "gaugeStartAngle": -120,
-          "gaugeShowAxis": true,
-          "gaugeLargeSegments": 6,
-          "gaugeSmallSegments": 2,
-          "gaugeValue": 86,
-          "gaugePreviousValue": 72,
-          "minRadius": 10,
-          "maxRadius": 25
-        },
-        "dashboardColumns": 16,
-        "datatableOptions": {
-          "selectedColumns": [
-            1,
-            2,
-            3,
-            9,
-            8
-          ],
-          "rowsPerPage": 10
-        },
-        "dateOrder": "ASC",
-        "dateRange": "range",
-        "dateType": "relative",
-        "defaultsSet": true,
-        "endDate": "04-10-2025",
-        "endDateRelative": 0,
-        "filters": {
-          "type": "groups",
-          "owners": [],
-          "subTypes": [],
-          "tags": [],
-          "containsText": "",
-          "documentType": "",
-          "incidentStatus": "",
-          "eventStatus": "",
-          "signatureType": "",
-          "securitylabel": "",
-          "ownerName": "",
-          "task": {
-            "taskStatus": "",
-            "taskAssignee": "",
-            "taskEscalationDate": "",
-            "dueDate": ""
-          },
-          "confidence": {
-            "operator": ">",
-            "value": -1
-          },
-          "rating": {
-            "operator": ">",
-            "value": 0
-          },
-          "dateAdded": {
-            "beforeDate": "",
-            "afterDate": ""
-          },
-          "lastObserved": "",
-          "hostData": {
-            "whoisActive": false,
-            "dnsActive": false
-          },
-          "trackData": {
-            "active": false,
-            "hasResults": false
-          },
-          "geoLocData": {
-            "addresscidr": "",
-            "countryCode": "",
-            "organization": "",
-            "asn": ""
-          },
-          "attributes": {},
-          "associatedGroup": {
-            "id": 0,
-            "name": ""
-          },
-          "associatedIndicator": {
-            "id": 0,
-            "name": ""
-          },
-          "victimsData": {
-            "organization": "",
-            "suborg": "",
-            "nationality": "",
-            "workLocation": ""
-          },
-          "victimassetsData": {
-            "victimName": "",
-            "asset": ""
-          },
-          "indicatorsData": {
-            "indicatorActive": false,
-            "observationCount": {
-              "enabled": false,
-              "low": 0,
-              "high": 0
-            },
-            "threatAssessScore": {
-              "enabled": false,
-              "selectedRange": "",
-              "low": 0,
-              "high": 0
-            },
-            "falsePositiveCount": {
-              "enabled": false,
-              "low": 0,
-              "high": 0
-            }
-          },
-          "groupsData": {
-            "emailScore": {
-              "enabled": false,
-              "low": 0,
-              "high": 0
-            },
-            "eventDate": {
-              "low": "",
-              "high": ""
-            },
-            "taskDueDate": {
-              "low": "",
-              "high": ""
-            }
-          }
-        },
-        "groupBy": "typename",
-        "groupByDataType": "String",
-        "groupByIncludeOther": false,
-        "groupByLimit": 25,
-        "groupByOrder": "DESC",
-        "groupByTargetEnabled": true,
-        "groupByTargetOptions": [
-          {
-            "label": "Choose..."
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Adversary Opportunity",
-            "value": "attributeAdversary_Opportunity",
-            "description": "Adversary Opportunity",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Attack History Score",
-            "value": "attributeAttack_History_Score",
-            "description": "Attack History Score",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Attribution Confidence",
-            "value": "attributeAttribution_Confidence",
-            "description": "Confidence of attribution of Threat activity to a given person, group, entity.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) CVSS v2 Last Modified",
-            "value": "attributeCVSS_v2_Last_Modified",
-            "description": "A timestamp indicating when the CVSS v2 score was last modified. It helps track changes or updates to the score.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) CVSS v2 Published",
-            "value": "attributeCVSS_v2_Published",
-            "description": "A timestamp indicating when the CVSS v2 score was published. It provides information on when the score was made publicly available.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) CVSS v3 Created",
-            "value": "attributeCVSS_v3_Created",
-            "description": "A timestamp indicating when the CVSS v3 score was initially calculated or created.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) CVSS v3 Modified",
-            "value": "attributeCVSS_v3_Modified",
-            "description": "Indicates whether the vulnerability has been modified since its initial assessment. This can include changes to the vulnerability or changes to the environment in which it exists.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "(Attribute) Confidence",
-            "value": "attributeConfidence",
-            "description": "Characterizes the level of confidence held in the characterization of this Campaign or Signature.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Count Test",
-            "value": "attributeCount_Test",
-            "description": "Testing Count Attribute",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Created Date Time",
-            "value": "attributeCreated_Date_Time",
-            "description": "Date and time when this STIX Campaign object was created.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Date of Discovery",
-            "value": "attributeDate_of_Discovery",
-            "description": "Select the date when the activity in question was discovered.",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Detection Percentage",
-            "value": "attributeDetection_Percentage",
-            "description": "The percentage of AV engines that are detecting the file as malicious.",
-            "type": "Integer"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "(Attribute) Event Start Date",
-            "value": "attributeEvent_Start_Date",
-            "description": "Event Start Date",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) External Date Created",
-            "value": "attributeExternal_Date_Created",
-            "description": "The External timestamp of when this resource was Create. Example: 2017-05-03T14:38:02Z",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) External Date Expires",
-            "value": "attributeExternal_Date_Expires",
-            "description": "The External timestamp of when this resource will expire. Example: 2017-05-03T14:38:02Z",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) External Date Last Modified",
-            "value": "attributeExternal_Date_Last_Modified",
-            "description": "The External timestamp of when this resource was Last Modified. Example: 2017-05-03T14:38:02Z",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) First Seen",
-            "value": "attributeFirst_Seen",
-            "description": "The timestamp of when this indicator or activity was first seen. Example: 2017-05-03T14:38:02Z",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Ingestion Date",
-            "value": "attributeIngestion_Date",
-            "description": "The date when the information is ingested.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Intent Score",
-            "value": "attributeIntent_Score",
-            "description": "Intent Score",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Last Seen",
-            "value": "attributeLast_Seen",
-            "description": "The timestamp of when this indicator or activity was last seen. Example: 2017-05-03T14:38:02Z",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Modified Date Time",
-            "value": "attributeModified_Date_Time",
-            "description": "Date and time when this STIX Campaign object was modified.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Publish Date",
-            "value": "attributePublish_Date",
-            "description": "The date when information becomes official.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Risk Score",
-            "value": "attributeRisk_Score",
-            "description": "A measure of the level of associated risk.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) STIX Object Version",
-            "value": "attributeSTIX_Object_Version",
-            "description": "The version number of this STIX Campaign.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) STIX Timestamp",
-            "value": "attributeSTIX_Timestamp",
-            "description": "Specifies a timestamp for the definition of a specific version of a Campaign.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Source Date Time",
-            "value": "attributeSource_Date_Time",
-            "description": "Select Date and Time information was provided by source.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Technical Capability Score",
-            "value": "attributeTechnical_Capability_Score",
-            "description": "Technical Capability Score",
-            "type": "Integer"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "(Attribute) Testing - Integer",
-            "value": "attributeTesting_-_Integer",
-            "description": "Testing out integer ratings",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Threat Map Intent",
-            "value": "attributeThreat_Map_Intent",
-            "description": "Intent value associated with the Threat Map.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Threat Map Opportunity",
-            "value": "attributeThreat_Map_Opportunity",
-            "description": "Opportunity value associated with the Threat Map.",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Threat Map Prevalence",
-            "value": "attributeThreat_Map_Prevalence",
-            "description": "Prevalence value associated with the Threat Map.",
-            "type": "Integer"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "(Attribute) Time Observed",
-            "value": "attributeTime_Observed",
-            "description": "The time the entity was observed.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "(Attribute) Time Verified",
-            "value": "attributeTime_Verified",
-            "description": "The time the report was verified.",
-            "type": "DateTime"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "(Attribute) Vendor Seen",
-            "value": "attributeVendor_Seen",
-            "description": "Vendor Seen",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Date (Email)",
-            "value": "emailDate",
-            "description": "The date of the email",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Date Added",
-            "value": "dateAdded",
-            "description": "The date the group was added to the system",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Date Added (Document)",
-            "value": "documentDateAdded",
-            "description": "The date the document was added",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Date Added (Signature)",
-            "value": "signatureDateAdded",
-            "description": "The date the signature was added",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Date Added (Task)",
-            "value": "taskDateAdded",
-            "description": "The date the task was added",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Downvote Count",
-            "value": "downvoteCount",
-            "description": "The number of downvotes the group has received",
-            "type": "Integer"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "Due Date (Task)",
-            "value": "taskDueDate",
-            "description": "The due date of a task",
-            "type": "Date"
-          },
-          {
-            "groupable": true,
-            "targetable": true,
-            "label": "Escalation Date (Task)",
-            "value": "taskEscalationDate",
-            "description": "The escalation date of a task",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Event Date",
-            "value": "eventDate",
-            "description": "The event date of the group",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "External Date Added",
-            "value": "externalDateAdded",
-            "description": "The date and time that the group was first created externally",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "External Date Expires",
-            "value": "externalDateExpires",
-            "description": "The date and time the group expires externally",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "External Last Modified",
-            "value": "externalLastModified",
-            "description": "The date and time the group was modified externally",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "File Size (Document)",
-            "value": "documentFilesize",
-            "description": "The filesize of the document",
-            "type": "Long"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "First Seen",
-            "value": "firstSeen",
-            "description": "The date and time that the group was first seen",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Last Modified",
-            "value": "lastModified",
-            "description": "The date the group was last modified",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Last Modified",
-            "value": "taskLastModified",
-            "description": "The date the group was last modified",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Last Seen",
-            "value": "lastSeen",
-            "description": "The date and time that the group was last seen",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Reminder Date (Task)",
-            "value": "taskReminderDate",
-            "description": "The reminder date of a task",
-            "type": "Date"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Score (Email)",
-            "value": "emailScore",
-            "description": "The score of the email",
-            "type": "Integer"
-          },
-          {
-            "groupable": false,
-            "targetable": true,
-            "label": "Upvote Count",
-            "value": "upvoteCount",
-            "description": "The number of upvotes the group has received",
-            "type": "Integer"
-          }
-        ],
-        "inheritOwners": true,
-        "queryBy": "groups",
-        "queryView": "datatable",
-        "selectedCardGroup": "query",
-        "startDate": "04-03-2025",
-        "startDateRelative": -7,
-        "subType": "new-query",
-        "sumAcrossOwners": true
-      },
-      {
         "id": 16,
         "type": "query",
         "config": {
@@ -3847,8 +3776,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -4497,17 +4426,17 @@
         "sumAcrossOwners": true
       },
       {
-        "id": 17,
+        "id": 15,
         "type": "query",
         "config": {
           "dragHandle": ".handle",
-          "col": 1,
-          "row": 5,
+          "col": 9,
+          "row": 3,
           "sizex": 8,
           "sizey": 2
         },
-        "title": "{GROUP_NAME} Related TTPs - Last 30 days",
-        "advQuery": "{TTPS_30DAY}",
+        "title": "{GROUP_NAME} Related Intel - Last 7 days",
+        "advQuery": "{GROUPS_7DAY}",
         "chartOptions": {
           "selectedChartGroup": "barCharts",
           "chartType": "bar-vertical",
@@ -4528,8 +4457,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -4562,7 +4491,7 @@
             2,
             3,
             9,
-            10
+            8
           ],
           "rowsPerPage": 10
         },
@@ -4606,6 +4535,10 @@
           "hostData": {
             "whoisActive": false,
             "dnsActive": false
+          },
+          "trackData": {
+            "active": false,
+            "hasResults": false
           },
           "geoLocData": {
             "addresscidr": "",
@@ -4667,7 +4600,7 @@
             }
           }
         },
-        "groupBy": "typeName",
+        "groupBy": "typename",
         "groupByDataType": "String",
         "groupByIncludeOther": false,
         "groupByLimit": 25,
@@ -5124,8 +5057,8 @@
         "type": "query",
         "config": {
           "dragHandle": ".handle",
-          "col": 9,
-          "row": 5,
+          "col": 1,
+          "row": 7,
           "sizex": 8,
           "sizey": 2
         },
@@ -5151,8 +5084,8 @@
           "showYAxis": true,
           "showLegend": false,
           "legendTitle": "Legend",
-          "showXAxisLabel": false,
-          "showYAxisLabel": false,
+          "showXAxisLabel": true,
+          "showYAxisLabel": true,
           "xAxisLabel": "",
           "yAxisLabel": "",
           "showGridLines": false,
@@ -5748,5 +5681,3 @@
     "orgMap": {}
   }
 }
-
-
